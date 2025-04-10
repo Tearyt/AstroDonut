@@ -1,5 +1,5 @@
 # AstroDonut
-AstroDonut is a Python package for generating synthetic elliptical ring structures—ideal for simulating protoplanetary or circumstellar disks such as HL Tauri. 
+AstroDonut is a Python package for generating synthetic elliptical ring structures, ideal for simulating protoplanetary or circumstellar disks such as HL Tauri. 
 
 ## Requirements
 - The package should be able to generate elliptcial rings(donuts) to simulate disk structures around young stellar objects (YSOs) to test telescope configurations, plan observations, and develop data reduction pipelines, astronomers need realistic yet flexible synthetic models of these disks.
