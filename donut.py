@@ -1,5 +1,5 @@
 import numpy as np
-from .utils import validate_parameters, calculate_intensity, transform, create_ring
+from utils import validate_parameters, calculate_intensity, transform, create_ring
 
 class Donut:
     def __init__(self, a1, b1, ecc, inc, width, height):
@@ -13,6 +13,6 @@ class Donut:
 
         validate_parameters(a1, b1, ecc)
 
-        def ring():
-            self.model = create_ring(a1, b1, ecc, inc, width, height)
-            return self.model
+    def ring():
+        self.model = create_ring(a1, b1, ecc, inc, width, height)
+        return self.model
