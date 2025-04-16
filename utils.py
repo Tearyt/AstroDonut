@@ -16,7 +16,7 @@ def transform(x, y, x0, y0, cos_inc, sin_inc):
     transformed_y = norm_x * sin_inc + norm_y * cos_inc
     return transformed_x, transformed_y
 
-def create_donut_array(a1, b1, ecc, inc, width, height):
+def create_ring(a1, b1, ecc, inc, width, height):
     array = np.zeros((height, width), dtype=np.float32)
 
     x0 = width // 2
