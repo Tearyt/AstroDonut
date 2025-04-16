@@ -23,8 +23,8 @@ def create_ring(a1, b1, ecc, inc, width, height):
     y0 = height // 2
 
     inc_rad = np.radians(inc)
-    cos_inc = np.cos(inc_rad)
-    sin_inc = np.sin(inc_rad)
+    cos_inc = np.cos(-inc_rad)
+    sin_inc = np.sin(-inc_rad)
 
     # Outer ellipse
     for y in range(height):
