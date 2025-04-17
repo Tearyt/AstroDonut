@@ -13,7 +13,7 @@ d2.ring()
 d3.ring()
 
 # Combine them in a DonutList
-dl = DonutList([d1, d2, d3])  # ← list of Donut objects, not a shape
+dl = DonutList([d1, d2, d3])
 combined_model = dl.get_combined()
 
 # Plot the combined donut disk
