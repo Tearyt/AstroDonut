@@ -16,7 +16,7 @@ def transform(x, y, x0, y0, cos_inc, sin_inc):
     transformed_y = norm_x * sin_inc + norm_y * cos_inc
     return transformed_x, transformed_y
 
-def create_ring(a1, b1, ecc, inc, width, height):
+def create_ring(a1, b1, ecc, inc, ring_ratio, width, height):
     array = np.zeros((height, width), dtype=np.float32)
 
     x0 = width // 2
@@ -35,15 +35,14 @@ def create_ring(a1, b1, ecc, inc, width, height):
                 intensity = calculate_intensity(dist, width)
                 array[y, x] = intensity
 
-    # Inner ellipse (the "hole")
-    ratio = b1 / a1
-    a2 = a1 * ratio
-    b2 = b1 * ratio
-
+    # Inner ellipse
+    a2 = a1 * ring_ratio
+    b2 = b1 * ring_ratio
+    
     for y in range(height):
         for x in range(width):
-            tx, ty = transform(x, y, x0, y0, cos_inc, sin_inc)
-            if (tx**2 / (a2**2 * (1 - ecc**2)) + ty**2 / (b2**2)) <= 1:
+            tx_i, ty_i = transform(x, y, x0, y0, cos_inc, sin_inc)
+            if tx_i**2 / (a2**2 * (1 - ecc**2)) + ty_i**2 / (b2**2) <= 1:
                 array[y, x] = 0
 
     return array
