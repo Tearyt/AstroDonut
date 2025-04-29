@@ -1,5 +1,5 @@
-from donut import Donut
-from donut_List import DonutList
+from astrodonut.donut import Donut
+from astrodonut.donut_List import DonutList
 from matplotlib import pyplot as plt
 
 # Create individual donuts
