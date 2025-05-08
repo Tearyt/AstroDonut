@@ -1,6 +1,7 @@
 from astrodonut.donut import Donut
 from astrodonut.donut_List import DonutList
 from matplotlib import pyplot as plt
+from astrodonut.donut_exporter import DonutExporter
 
 # Create individual donuts
 d1 = Donut(56, 40, 0.3, 40, 0.97, 200, 200)
@@ -21,4 +22,8 @@ plt.imshow(combined_model, origin='lower', cmap='hot')
 plt.title("Combined Donut Disk")
 plt.colorbar(label="Intensity")
 plt.show()
+
+# Save the combined donut to a FITS file
+exporter = DonutExporter(dl)
+exporter.save_to_fits("combined_donut.fits", overwrite=True)
 
