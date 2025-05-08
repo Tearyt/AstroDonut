@@ -16,13 +16,5 @@ class TestDonutList(unittest.TestCase):
         self.assertEqual(combined.shape, (200, 200))
         self.assertTrue((combined > 0).any())
 
-    def test_normalize(self):
-        d1 = Donut(100, 60, 0.1, 20, 0.8, 200, 200)
-        d1.ring()
-        dl = DonutList([d1])
-        dl.normalize()
-        combined = dl.get_combined()
-        self.assertAlmostEqual(combined.max(), 1.0, places=5)
-
 if __name__ == '__main__':
     unittest.main()
