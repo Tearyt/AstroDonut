@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "astrodonut"
+version = "0.1.0"
+description = "Tool for generating synthetic elliptical ring structures"
+authors = [
+  {name = "Eaton Jon Heidegger", email = "a12034363@unet.univie.ac.at"}
+]
+
+dependencies = [
+  "numpy>=1.21",
+  "astropy>=5.0"
+]
+
+[project.requires-python]
+python = ">=3.6"
+
+[tool.setuptools]
+# Add this to specify package configuration
+packages = ["astrodonut"]
