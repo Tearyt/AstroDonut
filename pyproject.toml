@@ -14,10 +14,7 @@ dependencies = [
   "numpy>=1.21",
   "astropy>=5.0"
 ]
-
-[project.requires-python]
 python = ">=3.6"
 
 [tool.setuptools]
-# Add this to specify package configuration
 packages = ["astrodonut"]
