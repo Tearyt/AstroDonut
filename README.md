@@ -36,6 +36,10 @@ This helps Lando correct the input without generating unphysical models or debug
 
 Andreas wants to simulate whether a 0.01 AU-wide gap in a disk can be resolved by the ELT. They use AstroDonut to generate a single ultra-narrow elliptical ring (with a tiny `b1` value). They then simulate the observation and process it to test if such a narrow feature can be detected.
 
+## Documentation
+
+https://astrodonut.readthedocs.io/en/latest/
+
 ## Pseudo code examples
 
 import astrodonut as ad
