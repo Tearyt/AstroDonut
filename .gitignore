@@ -402,3 +402,11 @@ FodyWeavers.xsd
 # Sphinx build directory
 docs/build/
 docs/_build/
+
+# Build files
+*.egg-info/
+dist/
+build/
+
+# Ignore FITS files
+*.fits
