@@ -6,6 +6,8 @@ build-backend = "setuptools.build_meta"
 name = "astrodonut"
 version = "0.1.0"
 description = "Tool for generating synthetic elliptical ring structures"
+readme = "README.md"
+license = {text = "MIT"}
 authors = [
   {name = "Eaton Jon Heidegger", email = "a12034363@unet.univie.ac.at"}
 ]
